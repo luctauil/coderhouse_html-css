@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Projeto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container mt-3">
+    <header class="text-center">
+        <h1>Meus Projetos</h1>
+        <p class="lead">Ordem do estudo de hoje: <strong><u>index.html, grid_bootstrap.html, pseudo.html, bem.html</u></strong></p>
+        <p class="lead">Veja os projetos recentes e suas descrições.</p>
+        <p class="lead">Link para a biblioteca de ícones do <a href="https://fontawesome.com/v5/search" target="_blank">Font Awesome aqui</a> e <a href="https://cdnjs.com/libraries/font-awesome">aqui</a>.</p>
+        <p class="lead">Link para a documentação do <a href="https://getbootstrap.com/" target="_blank">Bootstrap aqui</a>.</p>
+    </header>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-3 col-sm-6 mt-3 project-card">
+            <div class="card">
+                <img src="imagens/frameworks_css.jpg" class="card-img-top" alt="Projeto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Frameworks CSS <i class="fas fa-wrench"></i></h5>
+                    <p class="card-text">Uso dos Frameworks CSS segundo State of CSS.</p>
+                    <a href="https://2023.stateofcss.com/en-US/css-frameworks/" target="_blank" class="btn btn-primary">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-6 mt-3 project-card">
+            <div class="card">
+                <img src="imagens/Frameworks_js.jpg" class="card-img-top" alt="Projeto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Frameworks JS <i class="fas fa-check-circle"></i></h5>
+                    <p class="card-text">Uso dos Frameworks JS segundo Stack Overflow</p>
+                    <a href="https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190" target="_blank" class="btn btn-primary">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-6 mt-3 project-card">
+            <div class="card">
+                <img src="https://placehold.co/300x200/0000FF/F1F1F1?text=Imagem+de+Teste" class="card-img-top" alt="Projeto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Projeto 3 <i class="fas fa-virus"></i></h5>
+                    <p class="card-text">Descrição do projeto 3.</p>
+                    <a href="#" class="btn btn-primary">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-6 mt-3 project-card">
+            <div class="card">
+                <img src="https://placehold.co/300x200/00FFFF/F1F1F1?text=Projeto+4" class="card-img-top" alt="Projeto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Projeto 3 <i class="fas fa-virus"></i></h5>
+                    <p class="card-text">Descrição do projeto 3.</p>
+                    <a href="#" class="btn btn-primary">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <hr />
+    <div class="container">
+        <h1>Lucas <small>Tauil</small></h1>
+
+        <p class="lead">Link para a documentação de <a href="https://getbootstrap.com/docs/5.3/components/navbar/" target="_blank">navegações</a>.</p>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Ativo</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Ação</a>
+              <a class="dropdown-item" href="#">Outra ação</a>
+              <a class="dropdown-item" href="#">Algo mais aqui</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Link isolado</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Desativado</a>
+          </li>
+        </ul>
+  
+        <div class="container mt-5">
+          <h2>Formulário Básico</h2>
+          <p class="lead">Link para a documentação de <a href="https://getbootstrap.com/docs/5.3/forms/overview/" target="_blank">formulários</a>.</p>
+          
+          <form action="#">
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" placeholder="Insira o e-mail">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Select de exemplo</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Exemplo de textarea</label>
+                <textarea class="form-control"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default">
+                Entrar
+              </button>
+          </form>
+        </div>
+  
+  
+        <div class="container mt-5">
+            <h2>Botões</h2>
+            <p class="lead">Link para a documentação de <a href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank">botões bootstrap</a>.</p>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-link">Link</button>
+
+            <br /><br />
+
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="btn btn-outline-success">Success</button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-warning">Warning</button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-light">Light</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+        </div>
+
+        <div class="container mt-5">
+            <h2>Tabelas</h2>
+            <p class="lead">Link para a documentação do <a href="https://getbootstrap.com/docs/5.3/content/tables/" target="_blank">tabelas bootstrap</a>.</p>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+  
+        <div class="container mt-5">
+
+            <h2>Paginação</h2>
+            <p class="lead">Link para a documentação de <a href="https://getbootstrap.com/docs/5.3/components/pagination/" target="_blank">Paginação bootstrap</a>.</p>
+  
+          <nav aria-label="Navegação de página exemplo">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+            </ul>
+        </nav>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

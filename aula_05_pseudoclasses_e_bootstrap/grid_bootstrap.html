@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Sistema de Grid com CSS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="grid_bootstrap.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Sistema de Grid com Bootstrap</h1>
+
+        <h2>1. Exemplo de Grid Básico</h2>
+        <p>O grid em Bootstrap divide a página em 12 colunas. Podemos usar essas colunas para alinhar elementos de forma responsiva.</p>
+        <div class="row">
+            <div class="col-4 grid-examplo">Coluna 1 (4/12)</div>
+            <div class="col-4 grid-examplo">Coluna 2 (4/12)</div>
+            <div class="col-4 grid-examplo">Coluna 3 (4/12)</div>
+        </div>
+
+        <h2>2. Grid com Colunas de Tamanhos Diferentes</h2>
+        <p>Você pode usar diferentes tamanhos para as colunas. Aqui está um exemplo com tamanhos desiguais:</p>
+        <div class="row">
+            <div class="col-6 grid-examplo">Coluna 1 (6/12)</div>
+            <div class="col-3 grid-examplo">Coluna 2 (3/12)</div>
+            <div class="col-3 grid-examplo">Coluna 3 (3/12)</div>
+        </div>
+
+        <h2>3. Grid Responsivo</h2>
+        <p>Com Bootstrap, você pode usar classes como <code>col-sm-</code>, <code>col-md-</code> e <code>col-lg-</code> para criar layouts que se ajustam dependendo do tamanho da tela.</p>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 grid-examplo">Coluna 1</div>
+            <div class="col-sm-12 col-md-6 col-lg-4 grid-examplo">Coluna 2</div>
+            <div class="col-sm-12 col-md-6 col-lg-4 grid-examplo">Coluna 3</div>
+        </div>
+
+        <h2>4. Grid com Espaçamento entre Colunas (Gutters)</h2>
+        <p>O Bootstrap inclui espaçamento automático entre colunas. Aqui está um exemplo usando a classe <code>g-3</code>:</p>
+        <div class="row g-3">
+            <div class="col-4 grid-examplo">Coluna 1</div>
+            <div class="col-4 grid-examplo">Coluna 2</div>
+            <div class="col-4 grid-examplo">Coluna 3</div>
+        </div>
+
+        <h2>5. Grid com Alinhamento</h2>
+        <p>O Bootstrap permite alinhar elementos dentro do grid usando as classes de alinhamento, como <code>.align-items-center</code> e <code>.justify-content-center</code>:</p>
+        <div class="row align-items-center justify-content-center" style="height: 150px;">
+            <div class="col-4 grid-examplo">Centralizado!</div>
+        </div>
+    </div>
+</body>
+</html>

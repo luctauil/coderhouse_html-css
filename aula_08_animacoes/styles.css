@@ -1,0 +1,162 @@
+/* Ajuste geral do container da página */
+.exemplos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Alinhamento de texto para as legendas */
+.caixa{
+    text-align: center;
+}
+
+.gradiente, .gradiente_radial{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Gradientes */
+.gradiente {
+    background: linear-gradient(45deg, blue, #feb47b);
+}
+
+.gradiente_radial {
+    background-image: radial-gradient(rgb(1, 255, 22), rgb(17, 0, 255));
+}
+
+/* Transformações */
+.transforma1, .transforma2, .transformaX, .transformaY, .transformaZ {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transforma1 {
+    background-color: darkblue;
+}
+
+.transforma1:hover {
+    transform: translate(10px, 30px); /* Movimentar valores para exemplo */
+}
+
+.transforma2 {
+    background: linear-gradient(45deg, blue, #feb47b);
+}
+
+.transforma2:hover {
+    transform: rotate(45deg); /* Movimentar valores para exemplo */
+}
+
+.transformaX, .transformaY, .transformaZ  {
+    background-color: gray;
+}
+
+.transformaX:hover {
+    transform: rotateX(45deg);
+}
+.transformaY:hover {
+    transform: rotateY(45deg);
+}
+.transformaZ:hover {
+    transform: rotateZ(45deg);
+}
+
+.transformaScale, .transformaSkew {
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transformaScale:hover {
+    transform: scale(2, 1);
+}
+
+.transformaSkew:hover {
+    transform: skew(20deg, 10deg);
+}
+
+/* Transições */
+.transicao1, .transicao2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transicao1 {
+    /* propriedade duração */
+    transition: height 4s;
+    background-color: pink;
+}
+
+.transicao1:hover {
+    height: 300px;
+}
+
+.transicao2 {
+    /* propriedade duração */
+    transition: width 0.5s;
+    background-color: orange;
+}
+
+.transicao2:hover {
+    width: 300px;
+}
+
+/* Descomentar para aplicar transição em todos feitos até agora */
+div {
+    transition: 0.5s;
+}
+
+
+/* Animações */
+.texto_animacao {
+    font-size: 28px;
+    font-weight: bold;
+
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+
+.animacao1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    animation-name: um_efeito;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 5s;
+}
+
+@keyframes um_efeito {
+    0% { width: 200px; 
+    background-color: green;}
+    25% { width: 350px; }
+    50% { width: 250px;
+      background-color: red; }
+    75% { width: 350px;}
+    100% { width: 200px;
+        background-color: darkmagenta;
+    }
+ }
+
+
+
+

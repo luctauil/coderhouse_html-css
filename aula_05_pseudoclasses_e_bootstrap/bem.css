@@ -1,0 +1,121 @@
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+}
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.header__menu .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.menu__item {
+    font-size: 16px;
+}
+.menu__item--active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.menu__link {
+    text-decoration: none;
+    color: white;
+}
+
+/* NOTICIA */
+.noticia {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.noticia--destacada {
+    background-color: dimgray;
+    color: white;
+}
+.noticia__titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.noticia__titulo--uppercase {
+    text-transform: uppercase;
+}
+.noticia__descricao {
+    font-size: 16px;
+    color: #f0f0f0;
+}
+
+/* CARD */
+.card {
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+.card--primary {
+    background-color: lightblue;
+}
+.card__imagem {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.card__titulo {
+    font-size: 20px;
+    color: #333;
+}
+.card__descricao {
+    font-size: 14px;
+    color: #666;
+}
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn--primary {
+    background-color: blue;
+    color: white;
+}
+
+
+/* GALERIA */
+.galeria {
+    margin: 20px 0;
+    padding: 15px;
+}
+.galeria__titulo {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.galeria__item {
+    margin: 10px 0;
+}
+.galeria__item--grande .galeria__imagem {
+    width: 100%;
+    max-width: 300px;
+}
+.galeria__item--pequeno .galeria__imagem {
+    width: 100%;
+    max-width: 150px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.footer__texto {
+    margin: 0;
+}

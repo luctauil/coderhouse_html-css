@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* Aplicar variáveis */
+body {
+  background-color: white;
+}
+
+p {
+  color: black;
+}
+
+a {
+  color: gray;
+}
+
+a:hover {
+  color: darkgray;
+}
+
+/* Fim das variáveis */
+/* Aninhamento */
+nav {
+  background-color: blue;
+}
+nav ul {
+  list-style-type: none;
+  margin: 10px;
+}
+nav ul li {
+  color: white;
+}
+
+/* Fim Aninhamento */
+/* @extend */
+.botao-secundario, .botao-primario {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.botao-primario {
+  background-color: blue;
+  color: white;
+}
+
+.botao-secundario {
+  background-color: gray;
+  color: black;
+}
+
+/* Fim @extend */
+/* @mixin */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.alerta {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #ffcccc;
+}
+
+/* Fim @mixin */
+
+/*# sourceMappingURL=arquivo.css.map */

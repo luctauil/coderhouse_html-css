@@ -1,0 +1,63 @@
+// Variáveis
+$tema: light;
+$cores: red, blue, green, yellow;
+
+// Condições
+body {
+    @if $tema == dark {
+        background-color: #333;
+        color: #fff;
+    } @else {
+        background-color: #fff;
+        color: #333;
+    }
+}
+
+// Laços
+@for $i from 1 through 5 {
+    .btn-#{$i} {
+      padding: $i * 5px;
+      font-size: $i * 2px + 10px;
+    }
+}
+
+$i: 1;
+@while $i <= 3 {
+  .coluna-#{$i} {
+    width: $i * 10%;
+    display: inline-block;
+    padding: 5px;
+  }
+  $i: $i + 1;
+}
+
+@each $cor in $cores {
+    .alerta-#{$cor} {
+      background-color: $cor;
+      color: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+}
+  
+
+  /* Uso de mapas */
+  // Mapas de cores
+$cores: (
+    "primaria": #007bff,
+    "sucesso": #28a745,
+    "perigo": #dc3545,
+    "aviso": #ffc107,
+    "sistema" : #ababab
+  );
+  
+  // Iterando sobre o mapa para gerar classes de alerta
+  @each $nome, $cor in $cores {
+        .alerta-#{$nome} {
+            background-color: $cor;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+  }

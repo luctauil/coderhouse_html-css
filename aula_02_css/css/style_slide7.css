@@ -1,0 +1,19 @@
+
+h1 {
+    color: red;
+    font-size: 30px;
+}
+
+.destaque {
+    color: green;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.item1{
+    color: rgb(34, 37, 98);
+    background-color: #264b85;
+
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula SASS: @extend e @mixin</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="arquivo.css">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-left mb-4">Aula SASS: @extend e @mixin</h1>
+        <div class="row">
+            <div class="col-12">
+                <p>O SASS possui diversas funcionalidades que ajudam a organizar e reaproveitar o código. Vamos explorar as diretivas <strong>@extend</strong> e <strong>@mixin</strong>, que permitem reutilizar estilos de maneira eficiente e organizada.</p>
+
+                <h2 class="mt-4">1. @extend</h2>
+                <p>A diretiva <code>@extend</code> é usada para compartilhar estilos entre seletores. Isso permite evitar duplicação de código, uma vez que diferentes elementos podem herdar os mesmos estilos base.</p>
+
+                <h3>Exemplo</h3>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+%botao-basico {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.botao-primario {
+  @extend %botao-basico;
+  background-color: blue;
+  color: white;
+}
+
+.botao-secundario {
+  @extend %botao-basico;
+  background-color: gray;
+  color: black;
+}
+</code>
+                </pre>
+
+                <p><strong>Resultado no CSS gerado:</strong></p>
+                <pre class="bg-light p-3">
+<code>
+.botao-primario, .botao-secundario {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.botao-primario {
+  background-color: blue;
+  color: white;
+}
+
+.botao-secundario {
+  background-color: gray;
+  color: black;
+}
+</code>
+                </pre>
+                <p>Note que o uso de <code>@extend</code> reduz a repetição de código no CSS gerado.</p>
+                <div>
+                    <button type="button" class="botao-primario">Botao Primario</button>
+                    <button type="button" class="botao-secundario">Botao Secundária</button>
+                </div>
+
+                <h2 class="mt-4">2. @mixin</h2>
+                <p>A diretiva <code>@mixin</code> permite criar blocos de código reutilizáveis que podem incluir parâmetros. Diferentemente do <code>@extend</code>, o <code>@mixin</code> copia o código para onde for chamado.</p>
+
+                <h3>Exemplo</h3>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+@mixin borda-arredondada($raio: 5px) {
+  border: 1px solid #ccc;
+  border-radius: $raio;
+}
+
+.card {
+  @include borda-arredondada(10px);
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.alerta {
+  @include borda-arredondada; // Usa o valor padrão (5px)
+  padding: 15px;
+  background-color: #ffcccc;
+}
+</code>
+                </pre>
+
+                <p><strong>Resultado no CSS gerado:</strong></p>
+                <pre class="bg-light p-3">
+<code>
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.alerta {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #ffcccc;
+}
+</code>
+                </pre>
+                <p>O <code>@mixin</code> é muito útil para estilos que precisam ser parametrizados, como tamanhos, cores ou espaçamentos.</p>
+
+                <h2 class="mt-4">3. Diferenças entre @extend e @mixin</h2>
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>@extend</th>
+                            <th>@mixin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reutilização</td>
+                            <td>Compartilha estilos entre seletores.</td>
+                            <td>Reutiliza blocos de código com ou sem parâmetros.</td>
+                        </tr>
+                        <tr>
+                            <td>Herança</td>
+                            <td>Simula herança entre seletores.</td>
+                            <td>Não há herança; o código é copiado.</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibilidade</td>
+                            <td>Menos flexível, pois não aceita parâmetros.</td>
+                            <td>Mais flexível, com suporte a parâmetros.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+                <p>Agora vamos ver na prática como os estilos criados com o <code>@mixin</code> podem ser aplicados em elementos reais, como um card e um alerta.</p>
+
+                <h2 class="mt-4">1. Card</h2>
+                <div class="card mb-4">
+                    <h3 class="card-title">Título do Card</h3>
+                    <p class="card-text">Este é um exemplo de card usando o mixin <code>@mixin borda-arredondada</code>. Ele possui um design clean, ideal para destacar informações importantes ou organizá-las visualmente.</p>
+                </div>
+
+                <h2 class="mt-4">2. Alerta</h2>
+                <div class="alerta">
+                    <strong>Atenção!</strong> Este é um exemplo de alerta com bordas arredondadas e fundo personalizado. Use-o para exibir mensagens importantes ao usuário.
+                </div>
+
+
+
+                <h2 class="mt-4">Conclusão</h2>
+                <p>Com o uso de <code>@extend</code> e <code>@mixin</code>, você pode organizar melhor o seu código SASS e evitar repetições desnecessárias. Escolha o mais adequado dependendo do contexto: use <code>@extend</code> para herança de estilos e <code>@mixin</code> para blocos reutilizáveis com maior flexibilidade.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-left">
+                <a href="index.html"><< Voltar para Início</a>
+            </div>
+            <div class="col-6 text-right">
+                <a href="pagina3.html"> Avançar para Condições e Laços >></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

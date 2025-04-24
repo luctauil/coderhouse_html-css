@@ -1,0 +1,90 @@
+header{
+    grid-area: header;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+}
+
+aside{
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+#article1{
+    grid-area: article1;
+    display: flex;
+    justify-content: center;
+    background-color: lightcoral;
+}
+
+#article2{
+    grid-area: article2;
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+}
+
+#article3{
+    grid-area: article3;
+    display: flex;
+    justify-content: center;
+    background-color: violet;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 50px 130px 50px 50px 50px 50px;
+        grid-gap: 0px;
+        grid-template-areas:
+        /*  "header"    Esconder no dispositivo pequeno   */
+            "main"
+            "aside"
+            "article1"
+            "article2"
+            "article3";
+    }
+
+    .cabecalho{     /* Remove o cabeçalho em dispositivos menores */
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 50px 200px 50px 50px;
+        grid-gap: 0px;
+        grid-template-areas:
+            "header header"
+            "main main"
+            "aside article1"
+            "article2 article3"
+    }
+}
+
+@media screen and (min-width: 1279px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 50px 130px 50px 50px;
+        grid-gap: 0px;
+        grid-template-areas:
+            "header header header"
+            "article1 article2 article3"
+            "aside aside aside"
+            "main main main"
+    }
+}

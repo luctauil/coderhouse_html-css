@@ -1,0 +1,162 @@
+/* Estilo básico para todos os dispositivos */
+* {
+    /* RESET CSS */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem; /*rem - unidade de medida que se baseia no elemento raiz da página - Se o padrão da sua página é font-size: 16px então 1 rem será 16px */
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+/* Menu padrão */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Seção principal */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.item {
+    background-color: #f4f4f4;
+    border: 2px solid #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Rodapé */
+footer p {
+    margin: 0;
+}
+
+/* Responsividade usando Media Queries */
+
+/* Telas pequenas (até 768px) */
+@media screen and (max-width: 768px) {
+    /* O menu muda para coluna para caber melhor */
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Ocultar o título principal em telas pequenas */
+    header h1 {
+        display: none;
+    }
+
+    /* Gallery: mudar para uma coluna em telas pequenas */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste de padding no main */
+    main {
+        padding: 1rem;
+    }
+
+    /* Ocultar o rodapé em telas pequenas */
+    footer {
+        display: none;
+    }
+}
+
+/* Telas médias (769px a 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Centralizar o texto do header */
+    header {
+        text-align: center;
+    }
+
+    /* Gallery: mudar para três colunas */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Ajustar a posição do menu para a esquerda */
+    nav ul {
+        justify-content: flex-start;
+    }
+}
+
+
+
+/* Estilo para dispositivos em orientação paisagem */
+@media screen and (orientation: landscape) {
+    /* Mostrar o título do cabeçalho apenas em paisagem */
+    header h1 {
+        display: block;
+    }
+}
+
+
+/*
+Outros tipos de media:
+screen: Para dispositivos com telas, como computadores, tablets, e smartphones.
+Esse é o tipo mais comum para design responsivo
+@media screen {
+    body {
+        font-size: 16px;
+    }
+}
+-----------
+print: Usado para estilizar o conteúdo impresso.
+Permite otimizar o layout para impressão, por exemplo, escondendo elementos desnecessários e ajustando o tamanho das fontes para economizar papel e melhorar a legibilidade.
+@media print {
+    body {
+        color: black;
+        background: white;
+    }
+}
+-----------
+all: Aplica o CSS a todos os tipos de mídia
+@media all {
+    p {
+        line-height: 1.5;
+    }
+}
+-----------
+speech: Para dispositivos de leitura de tela (como leitores de texto para deficientes visuais).
+Permite definir estilos para dispositivos que convertem o texto da tela em áudio.
+@media speech {
+    p {
+        speak: spell-out;
+    }
+}
+*/

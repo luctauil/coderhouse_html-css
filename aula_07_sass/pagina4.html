@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cond_loops.css">
+    <title>Aula SASS: Mapas</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-left mb-4">Aula SASS: Mapas</h1>
+        <div class="row">
+            <div class="col-12">
+                <p>No SASS, <strong>mapas</strong> são estruturas de chave e valor que permitem organizar dados em pares. Eles são úteis para centralizar configurações de estilos, como cores, tamanhos ou qualquer outro conjunto de valores que você queira reutilizar de forma dinâmica.</p>
+
+                <h2 class="mt-4">1. Criando um Mapa</h2>
+                <p>Você pode criar um mapa utilizando a sintaxe de chave e valor:</p>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+$cores: (
+  "primaria": #007bff,
+  "sucesso": #28a745,
+  "perigo": #dc3545,
+  "aviso": #ffc107
+);
+</code>
+                </pre>
+
+             
+
+                <h2 class="mt-4">2. Iterando Sobre Mapas</h2>
+                <p>Você pode usar <code>@each</code> para iterar sobre as chaves e valores de um mapa:</p>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+@each $nome, $cor in $cores {
+  .alerta-#{$nome} {
+    background-color: $cor;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+</code>
+                </pre>
+
+                <h2 class="mt-4">Exemplo Aplicado</h2>
+                <p>Abaixo, você pode ver os estilos gerados pelo uso de mapas:</p>
+
+                <h3>Alertas Gerados a Partir do Mapa</h3>
+                <div>
+                    <div class="alerta-primaria">Alerta Primário</div>
+                    <div class="alerta-sucesso">Alerta Sucesso</div>
+                    <div class="alerta-perigo">Alerta Perigo</div>
+                    <div class="alerta-aviso">Alerta Aviso</div>
+                </div>
+
+                <h2 class="mt-4">Código SCSS Completo</h2>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+$cores: (
+  "primaria": #007bff,
+  "sucesso": #28a745,
+  "perigo": #dc3545,
+  "aviso": #ffc107
+);
+
+@each $nome, $cor in $cores {
+  .alerta-#{$nome} {
+    background-color: $cor;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+}
+</code>
+                </pre>
+
+                <h2 class="mt-4">Conclusão</h2>
+                <p>Os mapas no SASS permitem organizar e acessar dados de forma simples e eficiente. Use-os para centralizar suas configurações e gerar estilos dinâmicos com facilidade!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-left">
+                <a href="pagina3.html"><< Voltar para Condições e Laços</a>
+            </div>
+            <div class="col-6 text-right">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

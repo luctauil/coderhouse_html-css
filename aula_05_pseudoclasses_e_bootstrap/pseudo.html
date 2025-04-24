@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Pseudo-Classes</title>
+    <link rel="stylesheet" href="pseudo.css">
+</head>
+<body>
+
+    <h1>Pseudo-Classes e Pseudo-Elementos em CSS</h1>
+
+    <h2>Pseudo-Classes - Interação</h2>
+    <button class="hover-button">Passe o mouse sobre mim</button>
+    <button class="active-button">Clique em mim</button>
+    <input type="text" placeholder="Clique para focar" class="focus-input">
+
+    <h3>Estrutura</h3>
+    <ul class="item-list">
+        <li>Primeiro Item</li>
+        <li>Segundo Item</li>
+        <li>Terceiro Item</li>
+        <li>Quinto Item</li>
+        <li>Sexto Item</li>
+        <li>Sétimo Item</li>
+    </ul>
+
+    <h3>Formulário</h3>
+    <input type="checkbox" id="checkbox" class="form-checkbox">
+    <label for="checkbox">Checkbox (marque para estilo de :checked)</label>
+
+    <input type="text" placeholder="Digite aqui (campo obrigatório)" required class="required-input">
+
+    <button class="disabled-button" disabled>Botão desativado</button>
+    <button class="enabled-button">Botão ativado</button>
+
+    <input type="email" class="campo_valido" placeholder="Ex: teste@example.com">
+
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+
+    <h2>Pseudo-Elementos em CSS</h2>
+
+    <section class="pseudo-element-section">
+        <h2 class="section-title">Exemplo de Pseudo-Elementos</h2>
+        <p class="pseudo-paragraph">Este é um parágrafo com estilo aplicado em partes específicas através de pseudo-elementos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, commodi temporibus. Necessitatibus iste officiis repellendus quo doloremque! Ducimus vitae harum in nisi a numquam sunt cum minima, debitis, et odit reprehenderit, laborum maxime. Quas praesentium ullam sequi ex dignissimos ratione architecto magni aspernatur ipsum voluptate debitis odit quisquam doloremque soluta eligendi magnam, dolor ipsa laborum accusantium! Omnis, dolorum dolor, beatae quasi facere et sit ducimus sed iste libero ex id consequuntur adipisci itaque earum illum quidem. Velit error asperiores pariatur.</p>
+        <div class="box">
+            <p class="box__content">Conteúdo dentro de uma caixa.</p>
+        </div>
+    </section>
+
+
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+
+    <table border="1" cellspacing="0" cellpadding="8">
+        <thead>
+            <tr>
+                <th>Aspecto</th>
+                <th>Pseudo-Classe</th>
+                <th>Pseudo-Elemento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Uso</strong></td>
+                <td>Define estados ou condições</td>
+                <td>Define partes específicas de um elemento</td>
+            </tr>
+            <tr>
+                <td><strong>Sintaxe</strong></td>
+                <td>Usa <code>:</code> (ex.: <code>:hover</code>)</td>
+                <td>Usa <code>::</code> (ex.: <code>::before</code>)</td>
+            </tr>
+            <tr>
+                <td><strong>Escopo</strong></td>
+                <td>Afeta todo o elemento</td>
+                <td>Afeta partes específicas do elemento</td>
+            </tr>
+            <tr>
+                <td><strong>Exemplo</strong></td>
+                <td><code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code></td>
+                <td><code>::before</code>, <code>::after</code>, <code>::first-letter</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

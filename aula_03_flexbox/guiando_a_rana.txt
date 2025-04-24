@@ -1,0 +1,29 @@
+
+
+https://flexboxfroggy.com/
+
+Nivel 1:
+justify-content: flex-end;
+
+Nivel 2:
+justify-content: center;
+
+Nivel 3:
+justify-content: space-around;
+
+Nivel 4:
+justify-content: space-between;
+
+Nivel 5:
+align-items: flex-end;
+
+Nivel 6:
+justify-content: center;
+align-items: center;
+
+Nivel 7:
+justify-content: space-around;
+align-items: flex-end;
+
+Nivel 8:
+flex-direction: row-reverse;

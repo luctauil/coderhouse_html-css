@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula SASS: Condições e Laços</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="cond_loops.css">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-left mb-4">Aula SASS: Condições e Laços</h1>
+        <div class="row">
+            <div class="col-12">
+                <p>O SASS suporta o uso de condições (<code>@if</code>, <code>@else</code>, <code>@else if</code>) e laços (<code>@for</code>, <code>@each</code>, <code>@while</code>) para criar estilos dinâmicos. Estas funcionalidades permitem escrever CSS mais inteligente e flexível.</p>
+
+                <h2 class="mt-4">1. Condições (<code>@if</code>, <code>@else</code>)</h2>
+                <p>As condições permitem aplicar estilos diferentes com base em variáveis ou valores.</p>
+
+                <h3>Exemplo</h3>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+$tema: dark;
+
+body {
+  @if $tema == dark {
+    background-color: #333;
+    color: #fff;
+  } @else {
+    background-color: #fff;
+    color: #333;
+  }
+}
+</code>
+                </pre>
+
+                <h2 class="mt-4">2. Laços (<code>@for</code>, <code>@each</code>, <code>@while</code>)</h2>
+                <p>Os laços permitem gerar repetidamente estilos baseados em uma sequência ou coleção de valores.</p>
+
+                <h3>Exemplo com <code>@for</code></h3>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+@for $i from 1 through 5 {
+  .btn-#{$i} {
+    padding: $i * 5px;
+    font-size: $i * 2px + 10px;
+  }
+}
+</code>
+                </pre>
+                <p>No exemplo acima, estamos gerando cinco variações de botões com tamanhos diferentes.</p>
+
+                <h3>Exemplo com <code>@each</code></h3>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+$cores: red, blue, green;
+
+@each $cor in $cores {
+  .alerta-#{$cor} {
+    background-color: $cor;
+    color: #fff;
+    padding: 10px;
+  }
+}
+</code>
+                </pre>
+
+                <h3>Exemplo com <code>@while</code></h3>
+                <pre class="bg-light p-3">
+<code>
+// SCSS
+$i: 1;
+
+@while $i <= 3 {
+  .coluna-#{$i} {
+    width: $i * 10%;
+  }
+  $i: $i + 1;
+}
+</code>
+                </pre>
+
+                <h2 class="mt-4">Exemplo Aplicado</h2>
+                <p>Abaixo, você pode ver os estilos gerados pelos exemplos acima em ação:</p>
+
+                <h3>Botões Gerados com <code>@for</code></h3>
+                <div>
+                    <button class="btn-1 btn btn-primary">Botão 1</button>
+                    <button class="btn-2 btn btn-primary">Botão 2</button>
+                    <button class="btn-3 btn btn-primary">Botão 3</button>
+                    <button class="btn-4 btn btn-primary">Botão 4</button>
+                    <button class="btn-5 btn btn-primary">Botão 5</button>
+                </div>
+
+                <h3 class="mt-4">Alertas Gerados com <code>@each</code></h3>
+                <div>
+                    <div class="alerta-red">Alerta Vermelho</div>
+                    <div class="alerta-blue">Alerta Azul</div>
+                    <div class="alerta-green">Alerta Verde</div>
+                </div>
+
+                <h3 class="mt-4">Colunas Geradas com <code>@while</code></h3>
+                <div class="row">
+                    <div class="coluna-1 bg-light">10%</div>
+                    <div class="coluna-2 bg-secondary text-white">20%</div>
+                    <div class="coluna-3 bg-dark text-white">30%</div>
+                </div>
+
+                <h2 class="mt-4">Conclusão</h2>
+                <p>Com condições e laços, você pode escrever estilos dinâmicos, reduzir repetição de código e manter seu CSS mais organizado e eficiente. Teste os exemplos e aplique-os em seus próprios projetos!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-left">
+                <a href="pagina2.html"><< Voltar para @extend e @mixin</a>
+            </div>
+            <div class="col-6 text-right">
+                <a href="pagina4.html"> Avançar para mapas >></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

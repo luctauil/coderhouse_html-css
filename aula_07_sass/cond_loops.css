@@ -1,0 +1,116 @@
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+.btn-1 {
+  padding: 5px;
+  font-size: 12px;
+}
+
+.btn-2 {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.btn-3 {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.btn-4 {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.btn-5 {
+  padding: 25px;
+  font-size: 20px;
+}
+
+.coluna-1 {
+  width: 10%;
+  display: inline-block;
+  padding: 5px;
+}
+
+.coluna-2 {
+  width: 20%;
+  display: inline-block;
+  padding: 5px;
+}
+
+.coluna-3 {
+  width: 30%;
+  display: inline-block;
+  padding: 5px;
+}
+
+.alerta-red {
+  background-color: red;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.alerta-blue {
+  background-color: blue;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.alerta-green {
+  background-color: green;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.alerta-yellow {
+  background-color: yellow;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Uso de mapas */
+.alerta-primaria {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.alerta-sucesso {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.alerta-perigo {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.alerta-aviso {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.alerta-sistema {
+  background-color: #ababab;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

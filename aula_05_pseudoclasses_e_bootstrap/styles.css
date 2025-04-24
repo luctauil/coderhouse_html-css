@@ -1,0 +1,47 @@
+/*
+Sistema de grid do Bootstrap respeita também os breakpoints
+xs (Extra small): <576px
+sm (Small): ≥576px
+md (Medium): ≥768px
+lg (Large): ≥992px
+xl (Extra large): ≥1200px
+xxl (Extra extra large): ≥1400px
+*/
+
+/* Estilos personalizados para os cartões de projeto */
+.project-card {
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Pseudoclasses CSS para estilização dos links e botões */
+a.btn-primary {
+    transition: background-color 0.3s;
+}
+
+a.btn-primary:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Personalização adicional */
+.card-title {
+    color: #333;
+}
+
+.card-title i {
+    color: green;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+header p.lead {
+    color: #6c757d;
+}

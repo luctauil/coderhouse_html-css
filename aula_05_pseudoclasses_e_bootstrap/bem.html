@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM - Bloco Elemento Modificador</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="bem.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">LOGO</div>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                <li class="menu__item menu__item--active"><a href="#" class="menu__link">Sobre</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="noticia noticia--destacada">
+            <h1 class="noticia__titulo noticia__titulo--uppercase">Título da notícia</h1>
+            <p class="noticia__descricao">Essa é uma notícia destacada com a metodologia BEM aplicada.</p>
+
+            <div class="card card--primary">
+                <img src="https://via.placeholder.com/150" class="card__imagem" alt="Imagem do Card">
+                <h2 class="card__titulo">Título do Card</h2>
+                <p class="card__descricao">Descrição do Card com mais detalhes.</p>
+                <button class="btn btn--primary">Ver mais</button>
+            </div>
+        </article>
+        
+        <section class="galeria">
+            <h2 class="galeria__titulo">Galeria de Imagens</h2>
+            <div class="galeria__item galeria__item--grande">
+                <img src="imagens/bem1.jpg" alt="Imagem Grande" class="galeria__imagem">
+            </div>
+            <div class="galeria__item galeria__item--pequeno">
+                <img src="https://placehold.co/150x150/0000FF/F1F1F1?text=Imagem+de+Teste" alt="Imagem Pequena" class="galeria__imagem">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">© 2024. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

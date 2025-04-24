@@ -1,0 +1,60 @@
+/* Seletor por tag - Aplica a todas as tags <h1> */
+h1 {
+    color: blue;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Seletor por classe - Pode ser reutilizado em vários elementos */
+.destaque {
+    color: white;
+    background-color: black;
+    font-size: large;
+    padding: 10px;
+}
+
+/* Seletor por identificador - Mais forte que a classe */
+#paragrafo-unico {
+    color: red;  /* Este estilo tem prioridade sobre .destaque */
+    font-weight: bold;
+}
+
+/* Seletor por classe para lista ordenada */
+.lista-estilizada {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Seletor por tag para a lista (menos prioridade que a classe) */
+ol {
+    font-size: 18px;
+    color: blue;
+}
+
+.quadrado {
+    display: inline-block; /* Deixa um na frente do outro */
+    width: 200px;
+    height: 200px;
+    border: solid 3px black;
+    margin: 1px;
+}
+
+.item1{
+    background-color: lightblue;
+}
+
+.item2{
+    background-color: lightgreen;
+}
+
+.item3{
+    background-color: pink;
+}
+
+
+.paragrafo_teste{
+    color: purple;
+}
+
+.conflito{
+    color: red;
+}

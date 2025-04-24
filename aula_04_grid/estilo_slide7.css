@@ -1,0 +1,46 @@
+div{
+    border: 1px solid red;
+    text-align: center; /* Alinhamento dos itens dentro div */
+    
+}
+
+.grid {
+    border: 1px solid blue;
+    
+    display: grid;
+
+    /* 1 coluna */
+    grid-template-columns: 100%;
+
+    /* 6 linhas */
+    grid-template-rows: 100px 100px 200px 100px 100px 100px;
+}
+
+
+@media screen and (min-width: 769px) {
+    .grid {
+        border: 1px solid violet;
+    
+        display: grid;
+    
+        /* 2 colunas */
+        grid-template-columns: 70% 30%;
+    
+        /* 3 linhas */
+        grid-template-rows: 40px 100px 100px;
+    }
+}
+
+@media screen and (min-width: 1279px) {
+    .grid {
+        border: 1px solid black;
+
+        display: grid;
+    
+        /* 3 colunas */
+        grid-template-columns: 20% 40% 40%;
+    
+        /* 2 linhas */
+        grid-template-rows: 100px 500px;
+    }
+}

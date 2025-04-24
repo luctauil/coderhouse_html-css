@@ -1,0 +1,33 @@
+/*
+static (padrão): O elemento segue o fluxo normal do documento.
+relative: O elemento é posicionado em relação à sua posição original no fluxo normal.
+absolute: O elemento é posicionado em relação ao seu ancestral mais próximo com position diferente de static.
+fixed: O elemento é posicionado em relação à janela do navegador (viewport), e não se move ao rolar a página.
+sticky: O elemento "gruda" no seu contêiner pai enquanto você rola a página, mas volta ao seu lugar quando o contêiner chega ao topo.
+*/
+
+p {
+    font-size: 35px;
+}
+
+div {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.azul {
+    border: solid 4px blue;
+    background-color: lightblue;
+}
+
+.amarelo {
+    border: solid 4px red;
+    background-color: yellow;
+
+    position: relative;
+    /*top e left: 
+    Propriedades a serem usadas com: relative, absolute, fixed, sticky */
+    top: 40px;
+    left: 40px;
+}

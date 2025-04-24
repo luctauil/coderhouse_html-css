@@ -1,0 +1,73 @@
+/* Aplicar variáveis */
+$color_fundo: white;
+$cor_letra: black;
+
+body{
+    background-color: $color_fundo;
+}
+
+p{
+    color: $cor_letra;
+}
+
+a{
+    color: gray;
+    
+}
+a:hover {
+    color: darkgray;
+}
+/* Fim das variáveis */
+
+/* Aninhamento */
+nav{
+    background-color: blue;
+    ul{
+        list-style-type: none;
+        margin: 10px;
+        li{
+            color: $color_fundo;
+        }
+    }
+}
+/* Fim Aninhamento */
+
+/* @extend */
+%botao-basico {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .botao-primario {
+    @extend %botao-basico;
+    background-color: blue;
+    color: white;
+  }
+  
+  .botao-secundario {
+    @extend %botao-basico;
+    background-color: gray;
+    color: black;
+  }
+/* Fim @extend */
+
+/* @mixin */
+@mixin borda-arredondada($raio: 5px) {
+    border: 1px solid #ccc;
+    border-radius: $raio;
+}
+  
+.card {
+    @include borda-arredondada(50px);
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+  
+.alerta {
+    @include borda-arredondada; // Usa o valor padrão (5px)
+    padding: 15px;
+    background-color: #ffcccc;
+}
+/* Fim @mixin */

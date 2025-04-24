@@ -1,0 +1,59 @@
+/* Seletor por TAG (menos prioridade) */
+h1 {
+    color: blue;
+    text-align: center;
+    font-size: 28px;
+}
+
+h2 {
+    color: green;
+    font-size: 24px;
+}
+
+p {
+    color: black;
+    font-size: 16px;
+}
+
+/* Seletor por CLASSE (prioridade maior que tag) */
+.titulo-destaque {
+    color: purple;
+    font-weight: bold;
+}
+
+.paragrafo-estilizado {
+    color: white;
+    background-color: gray;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.caixa {
+    border: 2px solid black;
+    padding: 15px;
+    background-color: lightgray;
+}
+
+/* Seletor por ID (maior prioridade) */
+#paragrafo-unico {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Exemplo de conflito: ID vs Classe (ID ganha) */
+#prioridade {
+    font-weight: bold;
+}
+
+img{
+    width: 300px;
+    border-radius: 40px;
+    border: solid 3px black;
+    transition: 0.5s;
+}
+
+img:hover{
+    width: 400px;
+    transition: 0.5s;
+}

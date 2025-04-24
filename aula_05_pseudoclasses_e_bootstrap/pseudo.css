@@ -1,0 +1,110 @@
+/* -------------- Pseudo-classe -------------- */
+
+/* Estilos para interações */
+
+.hover-button {
+    background-color: #4caf50;
+}
+
+.hover-button:hover {
+    background-color: #ffdd57;
+    color: #333;
+    cursor: pointer;
+}
+
+.active-button:active {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.focus-input:focus {
+    border: 5px solid #4caf50;
+}
+
+/* Estilos para estrutura */
+.item-list li:first-child {
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.item-list li:last-child {
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.item-list li:nth-child(2n-1) {
+    background-color: #ffeb3b;
+}
+
+
+/* Estilos para formulário */
+.form-checkbox:checked + label { /* + é o combinador de elemento. Um ao lado do outro */
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.required-input:required {
+    border: 1px solid #ff9800;
+}
+
+.disabled-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.enabled-button:enabled {
+    background-color: #8bc34a;
+    color: #fff;
+}
+
+.campo_valido:valid {
+    background-color: #4caf50;
+}
+
+.campo_valido:invalid {
+    background-color: #f44336;
+}
+
+/* -------------- Fim Pseudo-classe -------------- */
+
+/* -------------- Pseudo-elementos -------------- */
+.pseudo-paragraph::first-letter {
+    font-size: 2em;
+    color: darkred;
+    font-weight: bold;
+}
+
+.pseudo-paragraph::first-line {
+    font-style: italic;
+    color: gray;
+}
+
+.section-title::before {
+    content: "?????";
+    font-size: 1.5em;
+    color: gold;
+}
+
+.section-title::after {
+    content: "!!!!!!!!!!";
+    font-size: 1.5em;
+    color: silver;
+}
+
+.box::before {
+    content: "????????";
+    font-size: 1.2em;
+    color: blue;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.box::after {
+    content: "???????";
+    font-size: 1.2em;
+    color: green;
+    display: block;
+    margin-top: 10px;
+}
+/* -------------- Fim Pseudo-elementos -------------- */
